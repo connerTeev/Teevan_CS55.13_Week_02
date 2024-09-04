@@ -1,18 +1,23 @@
 [
   {
     "title": "Learn",
-    "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs"
+    "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+    "emoji": "📝"
   },
   {
     "title": "About",
-    "url": "https://nodejs.org/en/about"
+    "url": "https://nodejs.org/en/about",
+    "emoji": "🤝"
   },
   {
     "title": "Download",
-    "url": "https://nodejs.org/en/download/package-manager"
+    "url": "https://nodejs.org/en/download/package-manager",
+    "emoji": "⬇️"
   },
   {
     "title": "Docs",
-    "url": "https://nodejs.org/docs/latest/api/"
+    "url": "https://nodejs.org/docs/latest/api/",
+    "emoji": "📚"
+
   }
 ]

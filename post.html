@@ -28,11 +28,11 @@
       <ul>
         {
           // mapping our lists and passing in props
-          props.list.map(
+          props.ourList.map(
             (item, index) => (
               <li key={index}>
                 <a href={item.url}>
-                  {item.title}
+                  {item.title} {item.emoji}
                 </a>
               </li>
             )
@@ -49,7 +49,7 @@
       //after getting JSON we create the root element 
       const root = ReactDOM.createRoot(document.getElementById("App"));
       root.render(
-        <UnorderedList list={jsonResponse} />
+        <UnorderedList ourList={jsonResponse} />
       )
     }
   );
