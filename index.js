@@ -22,7 +22,7 @@ const requestListener = (req,res) => {
       )
   } else {
     // else the url is not root, then return JSON
-    fs.readFile(__dirname + "/data.json")
+    fs.readFile(__dirname + "/source.json")
       .then(
         contents => {
           //setting header type
