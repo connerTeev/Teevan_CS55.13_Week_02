@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS55.13 Week 02</title>
+  <!--jQuery-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!--React-->
+  <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+  <!--Babel-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div>
+    <h1>Node.JS</h1>
+    <h2>Run JavaScript Everywhere</h2>
+    <!--creating our root to render to-->
+    <div id="App"></div>
+  </div>
+  <script type="text/babel">
+  'use strict';
+  function UnorderedList(props) {
+  console.log(props);
+  return(
+    <div>
+      <ul>
+        {
+          // mapping our lists and passing in props
+          props.list.map(
+            (item, index) => (
+              <li key={index}>
+                <a href={item.url}>
+                  {item.title}
+                </a>
+              </li>
+            )
+          )
+        }
+      </ul>
+    </div>
+  );
+  }
+  //loading JSON from server with jQuery
+  $.getJSON(
+    'x', // url to get JSON from
+    (jsonResponse) => {
+      //after getting JSON we create the root element 
+      const root = ReactDOM.createRoot(document.getElementById("App"));
+      root.render(
+        <UnorderedList list={jsonResponse} />
+      )
+    }
+  );
+  </script>
+</body>
+</html>
